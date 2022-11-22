@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	padding:0;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6{
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+ul, li{
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.container{
+	width: 1170px;
+	margin: 0 auto; 
+}
+.mgh{
+	height: 780px;
+}
+.box{
+	width: 100px;
+	height: 100px;
+	background: red;
+	margin-top: 30px;
+}
+.header{
+	background: url('../hmedia/play.png') no-repeat center / cover;
+
+}
+header a{
+	color: #fff;
+	transition: 0.5s;
+}
+header a:hover{
+	color: #fff;
+	transition: 0.5s;
+	color: cyan;
+}
+.logo{
+	margin-right: 69px;
+	filter: invert(100%);
+}
+.menu{
+	display: flex;
+}
+.menu li a{
+	letter-spacing: 0.1em;
+}
+.menu li{
+	margin-right: 40px;
+}
+.tel{
+	font-size: 17px;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	margin-left: auto;
+	padding: 3px;
+	border: 2px solid white;
+	border-style: groove;
+	transition: 0.5s;
+}
+.tel:hover{
+	transition: 0.5s;
+	border-color: cyan;
+	color: cyan;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	padding-top: 50px;
+}
+.hdtxt-reg{
+	margin-bottom: 200px;
+}
+.headtxt{
+	margin-top: 216px;
+}
+.headtxt p{
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 0.1em;
+	transition: 0.5s;
+}
+.headtxt p:hover{
+	transition: 0.5s;
+	color: cyan;
+	cursor: pointer;
+}
+.headtxt h1{
+	font-size: 100px;
+	transition: 0.5s;
+}
+.headtxt h1:hover{
+	transition: 0.5s;
+	color: cyan;
+	cursor: pointer;
+}
+.headtxt a{
+	margin-top: 37px;
+	font-size: 17px;
+	letter-spacing: 0.1em;
+}
+
+.hdnz{
+	display: flex;
+	justify-content: center;
+}
+h6{
+	font-size: 3em;
+}
+h2{
+	margin-top: 125px;
+	color: #000;
+}
+.mezh{
+	padding-top: 113px;
+	color: #000;
+}
+.mezhtxt{
+	margin-top: 74px;
+	display: flex;
+	justify-content: space-between;
+}
+.mezhtxt p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-align: justify;
+	line-height: 1.62em;
+}
+.mezhtxt-right, .mezhtxt-left{
+	width: 565px;
+}
+.mezhmedia{
+	margin-top: 85px;
+	display: flex;
+	justify-content: space-around;
+}
+.mezhmedia img{
+	height: 135px;
+	width: 240px;
+}
+
+.niztxt{
+	margin: 110px 0 30px 0;
+	color: #000;
+	display: flex;
+}
+.niz p{
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	margin-right: 67px;
+}
