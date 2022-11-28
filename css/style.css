@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
-
+@media (max-width:)
 ::-webkit-scrollbar{
 	width: 2px;
 	background: black;
 }
 ::-webkit-scrollbar-thumb{
+	background: white;
+}
+::-webkit-scrollbar-thumb:hover{
 	background: white;
 }
 ::-webkit-scrollbar:hover{
@@ -54,14 +57,15 @@ a{
 	background: url('../hmedia/play.png') no-repeat center / cover;
 
 }
-header a{
+header a, header ul li{
 	color: #fff;
 	transition: 0.5s;
+	transform: scale(1.0);
 }
-header a:hover{
-	color: #fff;
+header a:hover, header ul li:hover{
 	transition: 0.5s;
 	color: cyan;
+	transform: scale(1.15);
 }
 .logo{
 	margin-right: 69px;
@@ -69,12 +73,19 @@ header a:hover{
 	border: 2px solid white;
 	border-style: groove;
 	padding: 5px;
-	transition: 159s;
+	animation-name: logo;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-direction: alternate;
 }
-.logo:hover{
-	transform: rotate(2880deg);
-	filter: invert(100%);
-	transition: 1s;
+@keyframes logo{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(361deg);
+	}
 }
 .menu{
 	display: flex;
@@ -139,6 +150,8 @@ header a:hover{
 .hdnz{
 	display: flex;
 	justify-content: center;
+}
+.hdnz h6{
 	transition: 0.5s;
 }
 .hdnz h6:hover{
@@ -149,26 +162,40 @@ header a:hover{
 h6{
 	font-size: 3em;
 }
-h2{
-	margin-top: 125px;
+.mezhtop{
+	margin-top: 110px;
+}
+.timeclock{
+	font-size: 1.2em;
+	display: flex;
+	transition: 0.5s;
+}
+.timeclock:hover{
+	transition: 0.5s;
+	color: darkgoldenrod;
+}
+#clock{
+	color: #000;
+	font-weight: bold;
+	margin-left: 5px;
 }
 .mezh{
 	padding-top: 113px;
 	color: #000;
 }
-.mezhtxt{
+.mezhtxt1{
 	margin-top: 74px;
 	display: flex;
 	justify-content: space-between;
 	color: #000;
 }
-.mezhtxt p {
+.mezhtxt1 p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	text-align: justify;
 	line-height: 1.62em;
 }
-.mezhtxt-right, .mezhtxt-left{
+.mezhtxt1-right, .mezhtxt1-left{
 	width: 565px;
 }
 h3, h2{
@@ -188,11 +215,12 @@ h3:hover, h2:hover{
 .mezhmedia img{
 	height: 189px;
 	width: 336px;
-	filter: blur(0.9px);
 	transition: 0.5s;
-	filter:drop-shadow(3px 3px darkred);
+	transform: scale(1.0);
+	filter:blur(0.6px) drop-shadow(3px 3px darkred);
 }
 .mezhmedia img:hover{
+	transform: scale(1.2);
 	filter: blur(0px) drop-shadow(3px 3px darkred);
 	transition: 0.5s;
 	cursor: pointer;
