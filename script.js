@@ -34,8 +34,6 @@ if (zombig)
 window.location="http://lektop159.github.io";
 }
 
-alert(Добро пожаловать в - Avalon)
-
 /*const result = confirm('Вам есть 18?')
 console.log(result);*/
 
