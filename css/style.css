@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
-@media (max-width:)
+/*@media (max-width: 1000px){
+	.container{
+		width: auto;
+	}
+	.menu{
+		display: block;
+	}
+	.mezhtxt1-right, .mezhtxt1-left{
+	width: 300px;
+	}
+}*/
+
 ::-webkit-scrollbar{
 	width: 2px;
 	background: black;
@@ -45,7 +56,7 @@ a{
 	margin: 0 auto; 
 }
 .mgh{
-	height: 780px;
+	height: 715px;
 }
 .box{
 	width: 100px;
@@ -55,7 +66,7 @@ a{
 }
 .header{
 	background: url('../hmedia/play.png') no-repeat center / cover;
-
+	background-attachment: fixed;
 }
 header a, header ul li{
 	color: #fff;
@@ -65,7 +76,7 @@ header a, header ul li{
 header a:hover, header ul li:hover{
 	transition: 0.5s;
 	color: cyan;
-	transform: scale(1.15);
+	transform: scale(1.025);
 }
 .logo{
 	margin-right: 69px;
@@ -77,7 +88,7 @@ header a:hover, header ul li:hover{
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-delay: 0s;
-	animation-direction: alternate;
+	animation-timing-function: steps(3600);
 }
 @keyframes logo{
 	0%{
@@ -117,7 +128,7 @@ header a:hover, header ul li:hover{
 	padding-top: 50px;
 }
 .hdtxt-reg{
-	margin-bottom: 200px;
+	margin-bottom: 140px;
 }
 .headtxt{
 	margin-top: 216px;
@@ -152,14 +163,14 @@ header a:hover, header ul li:hover{
 	justify-content: center;
 }
 .hdnz h6{
-	transition: 0.5s;	
+	transition: 0.5s;
 	filter: opacity(100%);
 }
 .hdnz h6:hover{
 	transition: 0.5s;
 	color: red;
-	cursor: none;	
-	filter: opacity(100%);
+	cursor: none;
+	filter: opacity(0%);
 }
 h6{
 	font-size: 3em;
@@ -186,7 +197,7 @@ h6{
 	color: #000;
 }
 .mezhtxt1{
-	margin-top: 74px;
+	margin-top: 25px;
 	display: flex;
 	justify-content: space-between;
 	color: #000;
@@ -250,16 +261,51 @@ h3:hover, h2:hover{
 .opv4{
 	filter:drop-shadow(-3px -3px darkred);
 }
-.optxt{
+.opanitxt{
 	color: #000;
-	text-align: justify;
-	text-indent: 1.5em;
-	margin: 60px;
+	display: flex;
+	flex-flow: column;
+	width: 200px;
+	height: 400px;
+	justify-content: space-between;
+	align-self: center;
+	margin: 60px auto;
 }
-
-
+.opani-circle{
+	width: 70px;
+	height: 70px;
+	background: red;
+	margin-top: 40px;
+	position: relative;
+	animation-name:opani-circle;
+	animation-timing-function: steps(3600);
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-direction: alternate;
+}
+@keyframes opani-circle{
+	0%{
+		border-radius: 10%;
+		filter: hue-rotate(0deg);
+		transform: scale(1.0);
+		left: 0%;
+	}100%{
+		filter: hue-rotate(360deg);
+		transform: scale(1.105);
+		border-radius: 100%;
+		left: 90%;
+	}
+}
+.opani-log{
+	filter: invert(100%);
+	margin: 15px;
+}
+.opanitxt div p{
+	width: 400px;
+}
 .niztxt{
-	margin: 110px 0 30px 0;
+	margin: 140px 0 30px 0;
 	color: #000;
 	display: flex;
 }
@@ -267,4 +313,20 @@ h3:hover, h2:hover{
 	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
 	margin-right: 67px;
+}
+
+
+#show{
+	transition: 0.5s;
+	animation: show 1s forwards;
+}
+@keyframes show {
+ 0% {
+	opacity: 0;
+	transform: rotateX(-45deg) translateY(-20px);
+ }
+ 100% {
+	opacity: 1;
+	transform: rotateX(0deg) translateY(0px);
+ }
 }
