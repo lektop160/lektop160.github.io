@@ -382,16 +382,19 @@ h3:hover, h2:hover{
 	content:' -> Я ищу смысл жизни';
 	color: #fff;
 	font-size: 1.1em;
+	transition: 0.5s;
 }
 .sciper2:hover::after{
 	content:' -> # #### ####### ';
 	color: #fff;
 	font-size: 1.1em;
+	transition: 0.5s;
 }
 .sciper3:hover::after{
 	content:' -> Меняйся или умри';
 	color: #fff;
 	font-size: 1.1em;
+	transition: 0.5s;
 }
 
 
