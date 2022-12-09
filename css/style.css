@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
+/*@media (max-width: 1000px){
+	.container{
+		width: auto;
+	}
+	.menu{
+		display: block;
+	}
+	.mezhtxt1-right, .mezhtxt1-left{
+	width: 300px;
+	}
+}*/
+
 ::-webkit-scrollbar{
 	width: 2px;
 	background: black;
@@ -382,6 +395,21 @@ h3:hover, h2:hover{
 	filter:drop-shadow(3px 9px purple);
 	transition: 0.5s;
 	}
+.sciper1:hover::after{
+	content:' -> Я ищу смысл жизни';
+	color: #fff;
+	font-size: 1.1em;
+}
+.sciper2:hover::after{
+	content:' -> # #### ####### ';
+	color: #fff;
+	font-size: 1.1em;
+}
+.sciper3:hover::after{
+	content:' -> Меняйся или умри';
+	color: #fff;
+	font-size: 1.1em;
+}
 
 
 .nizn{
@@ -407,8 +435,8 @@ h3:hover, h2:hover{
 	margin-left: auto;
 }
 .up .upn{
-	height: 25px;
-	width: 25px;
+	height: 35px;
+	width: 35px;
 	background-color: #fff;
 	border-radius: 50%;
 	color: purple;
@@ -422,9 +450,6 @@ h3:hover, h2:hover{
 .up p{
 	padding-left: 7px;
 }	
-
-
-
 
 
 #show{
