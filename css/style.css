@@ -158,23 +158,6 @@ header a:hover, header ul li:hover{
 	font-size: 17px;
 	letter-spacing: 0.1em;
 }
-.hdnz{
-	display: flex;
-	justify-content: center;
-}
-.hdnz h6{
-	transition: 0.5s;
-	filter: opacity(100%);
-}
-.hdnz h6:hover{
-	transition: 0.5s;
-	color: red;
-	cursor: none;
-	filter: opacity(0%);
-}
-h6{
-	font-size: 3em;
-}
 .mezhtop{
 	margin-top: 110px;
 }
