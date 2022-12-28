@@ -248,7 +248,7 @@ h3:hover, h2:hover{
 .opanitxt{
 	background-color: white;
 	color: #fff;
-	height: 750px;
+	height: 950px;
 	background-attachment: fixed;
 	box-shadow: inset -10px -10px 15px rgb(0 0 0 / 24%), 
     			inset 10px 10px 15px rgb(70 70 70 / 28%);
@@ -365,21 +365,27 @@ h3:hover, h2:hover{
 }
 .opanitxt2{
 	display: flex;
+	justify-content: space-around;
+	position: relative;
 	margin-top: 30px;
-	align-self: center;
-	justify-content: center;
 }
-.opanivideo iframe{
+.opanivideo1 iframe{
 	border-radius: 5px;
 	filter:drop-shadow(3px 9px silver);
 	transition: 0.5s;
 }
-.opanivideo iframe:hover, .opanitxt1 div p:hover, .opani-circle:hover, .opani-fire:hover, .opani-inst:hover{
+.opanivideo2 iframe{
+	margin-top: 50px;
+	border-radius: 5px;
+	filter:drop-shadow(3px 9px silver);
+	transition: 0.5s;
+}
+.opanivideo1 iframe:hover, .opanivideo2 iframe:hover, .opanitxt1 div p:hover, .opani-circle:hover, .opani-fire:hover, .opani-inst:hover{
 	filter:drop-shadow(3px 9px purple);
 	transition: 0.5s;
 	}
 .sciper1:hover::after{
-	content:' -> Я ищу смысл жизни';
+	content:' -> Ð¯ Ð¸Ñ‰Ñƒ ÑÐ¼Ñ‹ÑÐ» Ð¶Ð¸Ð·Ð½Ð¸';
 	color: #fff;
 	font-size: 1.1em;
 	transition: 0.5s;
@@ -391,7 +397,7 @@ h3:hover, h2:hover{
 	transition: 0.5s;
 }
 .sciper3:hover::after{
-	content:' -> Меняйся или умри';
+	content:' -> ÐœÐµÐ½ÑÐ¹ÑÑ Ð¸Ð»Ð¸ ÑƒÐ¼Ñ€Ð¸';
 	color: #fff;
 	font-size: 1.1em;
 	transition: 0.5s;
