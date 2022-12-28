@@ -385,7 +385,7 @@ h3:hover, h2:hover{
 	transition: 0.5s;
 	}
 .sciper1:hover::after{
-	content:' -> Ð¯ Ð¸Ñ‰Ñƒ ÑÐ¼Ñ‹ÑÐ» Ð¶Ð¸Ð·Ð½Ð¸';
+	content:' -> Я ищу смысл жизни';
 	color: #fff;
 	font-size: 1.1em;
 	transition: 0.5s;
@@ -397,7 +397,7 @@ h3:hover, h2:hover{
 	transition: 0.5s;
 }
 .sciper3:hover::after{
-	content:' -> ÐœÐµÐ½ÑÐ¹ÑÑ Ð¸Ð»Ð¸ ÑƒÐ¼Ñ€Ð¸';
+	content:' -> Меняйся или умри';
 	color: #fff;
 	font-size: 1.1em;
 	transition: 0.5s;
