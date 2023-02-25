@@ -363,6 +363,19 @@ h3:hover, h2:hover{
 	transition: 0.5s;
 	filter:drop-shadow(3px 3px darkgreen);
 }
+.opanitxt1 div sciper{
+	background-color: royalblue;
+	margin-left: 400px;
+	width: 400px;
+	font-size: 1.1em;
+	padding: 5px 5px 5px 20px;
+	transition: 0.5s;
+	filter:drop-shadow(3px 9px silver);
+}
+.opanitxt1 div sciper:hover{
+	transition: 0.5s;
+	filter:drop-shadow(3px 3px darkgreen);
+}
 .opanitxt2{
 	display: flex;
 	justify-content: space-around;
@@ -402,6 +415,7 @@ h3:hover, h2:hover{
 	font-size: 1.1em;
 	transition: 0.5s;
 }
+
 
 
 .nizn{
