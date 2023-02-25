@@ -47,6 +47,8 @@ function encrypt(plaintext, keymap) {
     // Если символ является буквой из словаря, шифруем его
     if (c in keymap) {
       ciphertext += keymap[c] + ".";
+    } else if (c === " ") {
+      ciphertext += "..";
     }
   }
   // Удаляем последнюю точку, если она есть
@@ -63,9 +65,11 @@ function decrypt(ciphertext, keymap) {
   for (let i = 0; i < ciphertext.length; i++) {
     let c = ciphertext[i];
     // Если символ является разделителем, дешифруем буфер и очищаем его
-    if (c == ".") {
+    if (c == "." && ciphertext[i+1] !== "") {
       if (buffer in keymap) {
         plaintext += keymap[buffer];
+      } else if (buffer === "") {
+        plaintext += " ";
       }
       buffer = "";
     } else {
@@ -75,6 +79,8 @@ function decrypt(ciphertext, keymap) {
   // Дешифруем последний буфер
   if (buffer in keymap) {
     plaintext += keymap[buffer];
+  } else if (buffer === "") {
+    plaintext += " ";
   }
   return plaintext;
 }
