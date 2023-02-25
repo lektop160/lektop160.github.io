@@ -18,12 +18,80 @@ var zombig = confirm ("You are getting redirected. Click OK to continue.")
 if (zombig)
 window.location="http://lektop159.github.io";
 }
-for(let i = 1; i<10; i++){
-	console.log(i);
+
+
+// Находим элементы на странице
+let input = document.getElementById("input-text");
+let encryptButton = document.getElementById("encrypt-button");
+let decryptButton = document.getElementById("decrypt-button");
+let output = document.getElementById("output");
+
+// Добавляем обработчики на кнопки
+encryptButton.addEventListener("click", function() {
+  let plaintext = input.value;
+  let ciphertext = encrypt(plaintext, keymap);
+  output.innerText = "Зашифрованное сообщение: " + ciphertext;
+});
+
+decryptButton.addEventListener("click", function() {
+  let ciphertext = input.value;
+  let plaintext = decrypt(ciphertext, reverse_keymap);
+  output.innerText = "Дешифрованное сообщение: " + plaintext;
+});
+
+// Функция шифрования
+function encrypt(plaintext, keymap) {
+  let ciphertext = "";
+  for (let i = 0; i < plaintext.length; i++) {
+    let c = plaintext[i].toUpperCase();
+    // Если символ является буквой из словаря, шифруем его
+    if (c in keymap) {
+      ciphertext += keymap[c] + ".";
+    }
+  }
+  // Удаляем последнюю точку, если она есть
+  if (ciphertext.endsWith(".")) {
+    ciphertext = ciphertext.slice(0, -1);
+  }
+  return ciphertext;
 }
-const massive = [1, 2, 3];
-massive.push(10);
-console.log(massive);
-massive.pop();
-console.log(massive);
-console.log(massive.join(','));
+
+// Функция дешифрования
+function decrypt(ciphertext, keymap) {
+  let plaintext = "";
+  let buffer = "";
+  for (let i = 0; i < ciphertext.length; i++) {
+    let c = ciphertext[i];
+    // Если символ является разделителем, дешифруем буфер и очищаем его
+    if (c == ".") {
+      if (buffer in keymap) {
+        plaintext += keymap[buffer];
+      }
+      buffer = "";
+    } else {
+      buffer += c;
+    }
+  }
+  // Дешифруем последний буфер
+  if (buffer in keymap) {
+    plaintext += keymap[buffer];
+  }
+  return plaintext;
+}
+
+// Создаем словарь для шифрования
+let keymap = {
+  "Й": "1-1", "Ц": "2-1", "У": "3-1", "К": "4-1", "Е": "5-1", "Н": "6-1",
+  "Г": "7-1", "Ш": "8-1", "Щ": "9-1", "З": "10-1", "Х": "11-1", "Ъ": "12-1",
+  "Ф": "1-2", "Ы": "2-2", "В": "3-2", "А": "4-2", "П": "5-2", "Р": "6-2",
+  "О": "7-2", "Л": "8-2", "Д": "9-2", "Ж": "10-2", "Э": "11-2",
+  "Я": "1-3", "Ч": "2-3", "С": "3-3", "М": "4-3", "И": "5-3", "Т": "6-3",
+  "Ь": "7-3", "Б": "8-3", "Ю": "9-3", "Ё": "0-0"
+};
+
+// Создаем словарь для дешифрования
+let reverse_keymap = {};
+for (let letter in keymap) {
+  let code = keymap[letter];
+  reverse_keymap[code] = letter;
+}
